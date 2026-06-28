@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 export const runtime = 'nodejs'; // Prevent Edge runtime issues
 import { NextRequest, NextResponse } from 'next/server';
 import { resolveMx } from 'dns/promises';
@@ -92,3 +93,4 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: 'Server error' }, { status: 500 });
   }
 }
+

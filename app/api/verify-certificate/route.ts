@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import { NextRequest, NextResponse } from 'next/server';
 
 const SPREADSHEET_URL = 'https://opensheet.elk.sh/1qBC88TxFjuINhXS14C3_e_3-yvushF0F6dr1lZfuD3s/Sheet1';
@@ -27,3 +28,4 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: 'Server error' }, { status: 500 });
   }
 }
+

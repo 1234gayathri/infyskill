@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import { NextRequest, NextResponse } from 'next/server';
 import { createHash } from 'crypto';
 import connectDB from '@/lib/db';
@@ -47,3 +48,4 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: 'Unable to reset password right now.' }, { status: 500 });
   }
 }
+

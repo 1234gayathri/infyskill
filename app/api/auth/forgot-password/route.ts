@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import { NextRequest, NextResponse } from 'next/server';
 import { randomBytes, createHash } from 'crypto';
 import nodemailer from 'nodemailer';
@@ -85,3 +86,4 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: 'Unable to process the request right now.' }, { status: 500 });
   }
 }
+
