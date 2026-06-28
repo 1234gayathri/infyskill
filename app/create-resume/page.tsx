@@ -1,8 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 export default function CreateResumePage() {
   const RESUME_BUILDER_URL = 'https://resume-web-tau-three.vercel.app/';

@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import TestimonialCarousel from '@/components/TestimonialCarousel';
-import VideoTestimonials from '@/components/VideoTestimonials';
-import CompaniesSection from '@/components/CompaniesSection';
-import StatsCounter from '@/components/StatsCounter';
-import CertificationsSection from '@/components/CertificationsSection';
-import GallerySection from '@/components/GallerySection';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import TestimonialCarousel from '../components/TestimonialCarousel';
+import VideoTestimonials from '../components/VideoTestimonials';
+import CompaniesSection from '../components/CompaniesSection';
+import StatsCounter from '../components/StatsCounter';
+import CertificationsSection from '../components/CertificationsSection';
+import GallerySection from '../components/GallerySection';
 
 export default function HomePage() {
   useEffect(() => {

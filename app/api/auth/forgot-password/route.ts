@@ -2,8 +2,8 @@ export const dynamic = 'force-dynamic'
 import { NextRequest, NextResponse } from 'next/server';
 import { randomBytes, createHash } from 'crypto';
 import nodemailer from 'nodemailer';
-import connectDB from '@/lib/db';
-import User from '@/models/User';
+import connectDB from '../../../../lib/db';
+import User from '../../../../models/User';
 
 export const runtime = 'nodejs';
 

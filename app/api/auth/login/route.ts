@@ -3,8 +3,8 @@ export const runtime = 'nodejs'; // Prevent Edge runtime issues
 import { NextRequest, NextResponse } from 'next/server';
 import { resolveMx } from 'dns/promises';
 import jwt, { SignOptions, Secret } from 'jsonwebtoken';
-import connectDB from '@/lib/db';
-import User from '@/models/User';
+import connectDB from '../../../../lib/db';
+import User from '../../../../models/User';
 import { cookies } from 'next/headers';
 
 const emailRegex = /.+@.+\..+/;

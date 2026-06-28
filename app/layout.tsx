@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./styles.css";
 import Script from "next/script";
-import ChatbotWidget from "@/components/ChatbotWidget";
+import ChatbotWidget from "../components/ChatbotWidget";
 
 export const metadata: Metadata = {
   title: "InfySkill - Learn. Grow. Get Hired.",
