@@ -39,7 +39,7 @@ export default function Navbar() {
           <img style={{ backgroundColor: 'white' }} src="/images/logotwo.png" height="40" width="150" alt="logo" />
         </Link>
         
-        <div className="navbar-toggle" id="mobile-menu" onClick={toggleMenu}>
+        <div className={`navbar-toggle ${isMenuOpen ? 'active' : ''}`} id="mobile-menu" onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>

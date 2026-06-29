@@ -4925,4 +4925,49 @@ input:focus, select:focus, textarea:focus {
     outline: none !important;
 }
 
+/* ==================== RESPONSIVE OVERRIDES FOR REDESIGNED SECTIONS ==================== */
+@media (max-width: 992px) {
+    .hero {
+        padding: 140px 0 80px !important;
+        background: radial-gradient(circle at 50% 100%, #eff6ff 0%, #ffffff 100%) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        overflow-y: auto !important;
+        max-height: calc(100vh - 80px) !important;
+        padding-bottom: 80px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 110px 0 50px !important;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.25 !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+        margin-bottom: 25px !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+    
+    .btn-explore, .btn-watch {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}
+
+
 
