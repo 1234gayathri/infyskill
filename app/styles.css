@@ -4807,78 +4807,84 @@ section {
 }
 
 .hero-title .highlight {
-    color: #2563eb;
+    background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+    gap: 16px;
     align-items: center;
 }
 
-/* Explore button styling */
-.btn-explore {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #2563eb !important;
-    border-color: #2563eb !important;
+/* Redesigned CTAs & Button System */
+.btn-explore, .btn-primary, .cta-btn, .submit-btn, .course-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    background: linear-gradient(135deg, #4F46E5 0%, #2563EB 100%) !important;
     color: white !important;
     font-weight: 600 !important;
+    font-size: 0.95rem !important;
     padding: 12px 28px !important;
-    border-radius: 8px !important;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3) !important;
+    border-radius: var(--border-radius-md) !important;
+    border: none !important;
+    transition: var(--transition-premium) !important;
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25) !important;
+    cursor: pointer !important;
 }
 
-.btn-explore:hover {
-    background-color: #1d4ed8 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4) !important;
+.btn-explore:hover, .btn-primary:hover, .cta-btn:hover, .submit-btn:hover, .course-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35) !important;
+    filter: brightness(1.05);
 }
 
-/* Watch button styling */
-.btn-watch {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: transparent !important;
-    border: 1.5px solid #2563eb !important;
-    color: #2563eb !important;
+.btn-explore:active, .btn-primary:active, .cta-btn:active, .submit-btn:active, .course-btn:active {
+    transform: translateY(0) scale(0.98) !important;
+}
+
+.btn-watch, .btn-secondary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    background: white !important;
+    border: 1px solid rgba(79, 70, 229, 0.3) !important;
+    color: var(--primary-color) !important;
     font-weight: 600 !important;
+    font-size: 0.95rem !important;
     padding: 12px 28px !important;
-    border-radius: 8px !important;
-    transition: all 0.3s ease;
+    border-radius: var(--border-radius-md) !important;
+    transition: var(--transition-premium) !important;
+    cursor: pointer !important;
 }
 
-.btn-watch:hover {
-    background-color: rgba(37, 99, 235, 0.05) !important;
-    transform: translateY(-2px);
+.btn-watch:hover, .btn-secondary:hover {
+    background: rgba(79, 70, 229, 0.04) !important;
+    border-color: var(--primary-color) !important;
+    transform: translateY(-2px) !important;
 }
 
-.btn-play-icon {
-    font-size: 0.8rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 1.5px solid #2563eb;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    padding-left: 2px;
+.btn-watch:active, .btn-secondary:active {
+    transform: translateY(0) scale(0.98) !important;
 }
 
-/* ==================== REDESIGNED CARD SYSTEM OVERRIDES ==================== */
+/* Premium Card Overrides */
 .testimonial-card,
 .course-card,
 .past-workshop-card,
 .position-card,
 .promo-card {
+    background: white !important;
     border-radius: var(--border-radius-lg) !important;
+    border: 1px solid rgba(229, 231, 235, 0.5) !important;
     box-shadow: var(--card-shadow) !important;
-    border: 1px solid rgba(15, 23, 42, 0.05) !important;
     transition: var(--transition-premium) !important;
-    background-color: white !important;
+    overflow: hidden;
 }
 
 .testimonial-card:hover,
@@ -4886,12 +4892,12 @@ section {
 .past-workshop-card:hover,
 .position-card:hover,
 .promo-card:hover {
-    transform: translateY(-8px) !important;
+    transform: translateY(-6px) !important;
     box-shadow: var(--card-hover-shadow) !important;
-    border-color: rgba(37, 99, 235, 0.15) !important;
+    border-color: rgba(79, 70, 229, 0.15) !important;
 }
 
-/* Redesign Course Card and Workshop Card Image Section */
+/* Card Media / Thumbnail Overlay */
 .course-img img,
 .past-workshop-card img {
     border-top-left-radius: var(--border-radius-lg) !important;
@@ -4900,38 +4906,87 @@ section {
 }
 
 .course-card:hover .course-img img,
-.past-workshop-card:hover .past-workshop-card img {
-    transform: scale(1.03) !important;
+.past-workshop-card:hover img {
+    transform: scale(1.04) !important;
 }
 
-/* Card Button/Badge Styling Enhancements */
-.course-content h3,
-.position-card h3,
-.promo-card h3 {
+/* Typography Hierarchy Enhancements */
+h1, h2, h3, h4, h5, h6 {
     font-weight: 700 !important;
-    color: var(--dark-color) !important;
     letter-spacing: -0.02em !important;
+    color: var(--dark-color);
 }
 
-.course-meta span,
-.promo-card p {
-    color: var(--gray-color) !important;
+.section-title {
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    color: var(--dark-color) !important;
+    margin-bottom: 60px !important;
 }
 
-/* Subtle border refinements for form controls and inputs */
+.section-title::after {
+    background: linear-gradient(to right, #4f46e5, #2563eb) !important;
+    height: 4px !important;
+    border-radius: 4px !important;
+}
+
+/* Form Controls & Styling */
 input, select, textarea {
-    border-radius: var(--border-radius-sm) !important;
-    border: 1.5px solid var(--light-gray) !important;
+    border-radius: var(--border-radius-md) !important;
+    border: 1px solid rgba(229, 231, 235, 1) !important;
+    padding: 12px 16px !important;
+    font-size: 0.95rem !important;
     transition: var(--transition-premium) !important;
+    background-color: white !important;
+    color: var(--dark-color) !important;
 }
 
 input:focus, select:focus, textarea:focus {
     border-color: var(--primary-color) !important;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1) !important;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12) !important;
     outline: none !important;
 }
 
-/* ==================== RESPONSIVE OVERRIDES FOR REDESIGNED SECTIONS ==================== */
+/* Footer Premium Overhaul */
+.footer {
+    background-color: #0F172A !important;
+    color: #94A3B8 !important;
+    border-top: 1px solid #1E293B !important;
+    padding: 80px 0 40px !important;
+}
+
+.footer-col h3 {
+    color: white !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 24px !important;
+    letter-spacing: -0.01em !important;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px !important;
+}
+
+.footer-col ul li a {
+    color: #94A3B8 !important;
+    font-size: 0.95rem !important;
+    transition: var(--transition-premium) !important;
+    text-decoration: none !important;
+}
+
+.footer-col ul li a:hover {
+    color: white !important;
+    padding-left: 4px !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid #1E293B !important;
+    padding-top: 30px !important;
+    margin-top: 60px !important;
+    color: #64748B !important;
+}
+
+/* Responsive Overrides */
 @media (max-width: 992px) {
     .hero {
         padding: 140px 0 80px !important;
@@ -4974,6 +5029,7 @@ input:focus, select:focus, textarea:focus {
         justify-content: center !important;
     }
 }
+
 
 
 
